@@ -2,13 +2,20 @@
 function setRounds() {
     var roundsInput = Math.floor(document.getElementById('input').value);
     if (Number.isInteger(parseInt(roundsInput)) == true) {
+        
         document.getElementById('show-rounds').textContent = roundsInput;
         document.getElementById('input-field').style.display = "none";
+
+        
+
         return roundsInput;
     } else {
         document.getElementById('show-rounds').textContent = "Enter a Number";
+        document.getElementById('input').value = '';
     }
 }
+
+
 
 
 function game(player_play){
@@ -54,10 +61,11 @@ function game(player_play){
     const result = document.getElementById('resolution');
     result.textContent = resultText;
 
-
-
 }
 
-function startGame() {
-    /// set round counter
+
+function eventHandler() {
+    if (document.getElementById('input').value !== '') {
+        document.getElementById('show-rounds').textContent = document.getElementById('input').value;
+    }
 }
