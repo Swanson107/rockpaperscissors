@@ -1,25 +1,10 @@
 
+function game(player_play){
 
-function game(){
-
+    console.log(player_play);
     function getComputerChoice() {
         let choice = Math.floor(Math.random() * 3)
         return choice;
-    }
-
-    let player_choice = String(prompt("Rock, Paper, or Scissors: "));
-
-    console.log("player play: " + player_choice);
-
-
-    let player_play = player_choice.toLowerCase();
-
-    if (player_play === "rock"){
-        player_play = 0;
-    } else if (player_play === "paper"){
-        player_play = 1;
-    } else if (player_play === "scissors" || player_play === "scissor"){
-        player_play = 2;
     }
 
     let cpu_choice = getComputerChoice();
@@ -36,21 +21,25 @@ function game(){
 
     if (player_play === 0 && cpu_choice === 2){
         console.log("Player Wins!!");
+        resultText = "Player Wins!";
     } else if (player_play === 2 && cpu_choice === 0){
         console.log("CPU Wins!!");
+        resultText = "CPU Wins!";
     } else if (player_play > cpu_choice){
         console.log("Player Wins!");
+        resultText = "Player Wins!";
     } else if (player_play < cpu_choice){
         console.log("CPU Wins!");
+        resultText = "CPU Wins!"
     } else if (player_play === cpu_choice){
         console.log("Tie!");
+        resultText = "Tie!";
     }
 
+    let result = document.querySelector('#resolution');
 
-}
+    result.innerHTML = resultText;
 
-let rounds = parseInt(prompt("How many rounds: "));
 
-for (i = 0; i < rounds; i++){
-    game();
+
 }
