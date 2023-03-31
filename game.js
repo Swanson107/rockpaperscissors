@@ -1,7 +1,23 @@
 
-function game(player_play){
+function search() {
 
+}
+
+
+function setRounds() {
+    var roundsInput = document.getElementById('input').value;
+    if (Number.isInteger(parseInt(roundsInput)) == true) {
+        document.getElementById('show-rounds').textContent = roundsInput
+        return roundsInput
+    } else {
+        document.getElementById('show-rounds').textContent = "Error. Enter a Number";
+    }
+}
+
+
+function game(player_play){
     console.log(player_play);
+
     function getComputerChoice() {
         let choice = Math.floor(Math.random() * 3)
         return choice;

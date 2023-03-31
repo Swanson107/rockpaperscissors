@@ -11,15 +11,20 @@
 
 <div id="inputnum">
     <p>Number of Rounds</p>
+    <p id="show-rounds" style="margin-top:-0.5em"></p>
+    <div id="input-field">
     <input id="input"></input>
+    <button id="rounds-button" onclick="setRounds()"> </button>
+    </div>
+
 </div>
 
 <body>
     <h2 id="select-text">Select your choice</h2>
     <div id="buttons"> 
-        <button id="rock" onclick="game(0)">Rock</button>
-        <button id="paper" onclick="game(1)">Paper</button>
-        <button id="scissors" onclick="game(2)">Scissors</button>
+        <button id="rock" onclick="playGame()">Rock</button>
+        <button id="paper" onclick="playGame()">Paper</button>
+        <button id="scissors" onclick="playGame()">Scissors</button>
     </div>
 
     <div id="result">

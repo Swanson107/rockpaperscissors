@@ -11,13 +11,27 @@ body {
     align-items : center;
     margin-left : 1.5em;
     color : white;
-    font-size : 20px;
+    font-size : 26px;
     margin-bottom : 3.5em;
 }
 
+#input-field {
+    display:flex;
+    align-items : center;
+
+}
+
 #input {
-    width : 4em;
-    background-color :rgb(51, 88, 88)
+    width : 3em;
+    height : 1.7em;
+    background-color :rgb(51, 88, 88);
+    color : white;
+}
+
+#rounds-button {
+    height : 1.25em;
+    width : 2em;
+    margin-left : 1em;
 }
 
 #select-text {
