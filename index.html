@@ -13,7 +13,7 @@
     <p>Number of Rounds</p>
     <p id="show-rounds" style="margin-top:-0.5em">0</p>
     <div id="input-field">
-    <input id="input" oninput="eventHandler()"></input>
+    <input id="input" oninput="updateInput()"></input>
     <button id="rounds-button" onclick="getTotalRounds(), getRounds(), setRounds()">Submit</button>
     </div>
 
@@ -22,16 +22,17 @@
 <body>
     <h2 id="select-text">Select your choice</h2>
     <div id="buttons"> 
-        <button id="rock" onclick="roundDec(), game(0)">Rock</button>
-        <button id="paper" onclick="roundDec(), game(1)">Paper</button>
-        <button id="scissors" onclick="roundDec(), game(2)">Scissors</button>
+        <button id="rock" onclick="roundDec(), game(0), scoreCount()">Rock</button>
+        <button id="paper" onclick="roundDec(), game(1), scoreCount()">Paper</button>
+        <button id="scissors" onclick="roundDec(), game(2), scoreCount()">Scissors</button>
     </div>
 
     <div id="result">
         <p id="round-total"></p>
-        <p id="result-text">CPU result will go here</p>
+        <p id="result-text"></p>
         <p id="resolution"></p>
-        <p id="score">Score Goes Here</p>
+        <p id="player-score"></p>
+        <p id="cpu-score"></p>
     </div>
     
 </body>
