@@ -1,16 +1,12 @@
 
-function search() {
-
-}
-
-
 function setRounds() {
-    var roundsInput = document.getElementById('input').value;
+    var roundsInput = Math.floor(document.getElementById('input').value);
     if (Number.isInteger(parseInt(roundsInput)) == true) {
-        document.getElementById('show-rounds').textContent = roundsInput
-        return roundsInput
+        document.getElementById('show-rounds').textContent = roundsInput;
+        document.getElementById('input-field').style.display = "none";
+        return roundsInput;
     } else {
-        document.getElementById('show-rounds').textContent = "Error. Enter a Number";
+        document.getElementById('show-rounds').textContent = "Enter a Number";
     }
 }
 
@@ -58,4 +54,8 @@ function game(player_play){
 
 
 
+}
+
+function startGame(player_play) {
+    /// set round counter
 }
