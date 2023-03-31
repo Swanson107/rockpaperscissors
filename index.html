@@ -14,7 +14,7 @@
     <p id="show-rounds" style="margin-top:-0.5em">0</p>
     <div id="input-field">
     <input id="input" oninput="eventHandler()"></input>
-    <button id="rounds-button" onclick="setRounds()">Submit</button>
+    <button id="rounds-button" onclick="roundDec(getRounds())" onclick="setRounds()">Submit</button>
     </div>
 
 </div>
@@ -28,7 +28,7 @@
     </div>
 
     <div id="result">
-        <p id="round-total">10 / 10</p>
+        <p id="round-total"></p>
         <p id="result-text">CPU result will go here</p>
         <p id="resolution"></p>
         <p id="score">Score Goes Here</p>

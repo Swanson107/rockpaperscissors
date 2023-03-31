@@ -6,6 +6,8 @@ function setRounds() {
         document.getElementById('show-rounds').textContent = roundsInput;
         document.getElementById('input-field').style.display = "none";
 
+        //document.getElementById('round-total').textContent = `Round ${roundsInput} / ${roundsInput}`
+
         
 
         return roundsInput;
@@ -14,9 +16,6 @@ function setRounds() {
         document.getElementById('input').value = '';
     }
 }
-
-
-
 
 function game(player_play){
     console.log(player_play);
@@ -69,3 +68,19 @@ function eventHandler() {
         document.getElementById('show-rounds').textContent = document.getElementById('input').value;
     }
 }
+
+function getRounds() {
+    let rounds = document.getElementById('input').value;
+    var totalRounds = document.getElementById('input').value;
+    document.getElementById('round-total').textContent = `Rounds: ${rounds} / ${totalRounds}`
+    return rounds;
+}
+
+function roundDec(rounds) {
+    
+
+}
+
+const rounds = 0;
+
+
