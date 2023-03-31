@@ -14,7 +14,7 @@
     <p id="show-rounds" style="margin-top:-0.5em">0</p>
     <div id="input-field">
     <input id="input" oninput="eventHandler()"></input>
-    <button id="rounds-button" onclick="roundDec(getRounds())" onclick="setRounds()">Submit</button>
+    <button id="rounds-button" onclick="getTotalRounds(), getRounds(), setRounds()">Submit</button>
     </div>
 
 </div>
@@ -22,9 +22,9 @@
 <body>
     <h2 id="select-text">Select your choice</h2>
     <div id="buttons"> 
-        <button id="rock" onclick="game(0)">Rock</button>
-        <button id="paper" onclick="game(1)">Paper</button>
-        <button id="scissors" onclick="game(2)">Scissors</button>
+        <button id="rock" onclick="roundDec(), game(0)">Rock</button>
+        <button id="paper" onclick="roundDec(), game(1)">Paper</button>
+        <button id="scissors" onclick="roundDec(), game(2)">Scissors</button>
     </div>
 
     <div id="result">

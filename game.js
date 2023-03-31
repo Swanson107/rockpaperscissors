@@ -1,22 +1,4 @@
 
-function setRounds() {
-    var roundsInput = Math.floor(document.getElementById('input').value);
-    if (Number.isInteger(parseInt(roundsInput)) == true) {
-        
-        document.getElementById('show-rounds').textContent = roundsInput;
-        document.getElementById('input-field').style.display = "none";
-
-        //document.getElementById('round-total').textContent = `Round ${roundsInput} / ${roundsInput}`
-
-        
-
-        return roundsInput;
-    } else {
-        document.getElementById('show-rounds').textContent = "Enter a Number";
-        document.getElementById('input').value = '';
-    }
-}
-
 function game(player_play){
     console.log(player_play);
 
@@ -63,6 +45,25 @@ function game(player_play){
 }
 
 
+function setRounds() {
+    var roundsInput = Math.floor(document.getElementById('input').value);
+    if (Number.isInteger(parseInt(roundsInput)) == true) {
+        
+        document.getElementById('show-rounds').textContent = roundsInput;
+        document.getElementById('input-field').style.display = "none";
+
+        //document.getElementById('round-total').textContent = `Round ${roundsInput} / ${roundsInput}`
+
+        
+
+        return roundsInput;
+    } else {
+        document.getElementById('show-rounds').textContent = "Enter a Number";
+        document.getElementById('input').value = '';
+    }
+}
+
+
 function eventHandler() {
     if (document.getElementById('input').value !== '') {
         document.getElementById('show-rounds').textContent = document.getElementById('input').value;
@@ -70,17 +71,33 @@ function eventHandler() {
 }
 
 function getRounds() {
-    let rounds = document.getElementById('input').value;
-    var totalRounds = document.getElementById('input').value;
-    document.getElementById('round-total').textContent = `Rounds: ${rounds} / ${totalRounds}`
+    rounds = document.getElementById('input').value;
+    document.getElementById('round-total').textContent = `Rounds: ${rounds} / ${rounds}`;
     return rounds;
 }
 
-function roundDec(rounds) {
-    
-
+function getTotalRounds() {
+    let totalRounds = document.getElementById('input').value;
+    document.getElementById('round-total').textContent = `Rounds: ${rounds} / ${totalRounds}`;
+    return totalRounds;
 }
 
-const rounds = 0;
+let rounds = 0;
+
+function roundDec() {
+    const roundsTotal = getTotalRounds();
+    console.log("Total Rounds: " + roundsTotal);
+    console.log("Rounds before decrement: " + rounds);
+    rounds -= 1;
+    console.log("Rounds: " + rounds);
+    document.getElementById('round-total').textContent = `Rounds: ${rounds} / ${getTotalRounds()}`;
+}
+
+function changeRound(rounds) {
+    rounds -= 1;
+    return rounds;
+}
+
+
 
 
