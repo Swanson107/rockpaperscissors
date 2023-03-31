@@ -29,6 +29,9 @@ function game(player_play){
         cpu_play = "scissors";
     }
 
+    const cpuResult = document.getElementById('result-text');
+    cpuResult.textContent = `CPU played: ${cpu_play}`
+
     console.log("cpu play: " + cpu_play)
 
     if (player_play === 0 && cpu_choice === 2){
@@ -48,14 +51,13 @@ function game(player_play){
         resultText = "Tie!";
     }
 
-    let result = document.querySelector('#resolution');
-
-    result.innerHTML = resultText;
+    const result = document.getElementById('resolution');
+    result.textContent = resultText;
 
 
 
 }
 
-function startGame(player_play) {
+function startGame() {
     /// set round counter
 }

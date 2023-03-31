@@ -22,15 +22,15 @@
 <body>
     <h2 id="select-text">Select your choice</h2>
     <div id="buttons"> 
-        <button id="rock" onclick="startGame()">Rock</button>
-        <button id="paper" onclick="startGame()">Paper</button>
-        <button id="scissors" onclick="startGame()">Scissors</button>
+        <button id="rock" onclick="game(0)">Rock</button>
+        <button id="paper" onclick="game(1)">Paper</button>
+        <button id="scissors" onclick="game(2)">Scissors</button>
     </div>
 
     <div id="result">
         <p id="round-total">10 / 10</p>
         <p id="result-text">CPU result will go here</p>
-        <p id="resolution">WINLOSE</p>
+        <p id="resolution"></p>
         <p id="score">Score Goes Here</p>
     </div>
     
