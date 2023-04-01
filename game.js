@@ -55,6 +55,7 @@ function game(player_play){
 
 function setRounds() {
     var roundsInput = Math.floor(document.getElementById('input').value);
+    document.getElementById('select-text').textContent = "Select your choice";
     if (Number.isInteger(parseInt(roundsInput)) == true) {
         
         document.getElementById('show-rounds').textContent = roundsInput;

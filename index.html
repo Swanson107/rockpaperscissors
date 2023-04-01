@@ -22,9 +22,9 @@
 <body>
     <h2 id="select-text">Select your choice</h2>
     <div id="buttons"> 
-        <button id="rock" onclick="roundDec(), game(0), scoreCount()">Rock</button>
-        <button id="paper" onclick="roundDec(), game(1), scoreCount()">Paper</button>
-        <button id="scissors" onclick="roundDec(), game(2), scoreCount()">Scissors</button>
+        <button id="rock" onclick="game(0), scoreCount(), roundDec()">Rock</button>
+        <button id="paper" onclick="game(1), scoreCount(), roundDec() ">Paper</button>
+        <button id="scissors" onclick="game(2), scoreCount(), roundDec()">Scissors</button>
     </div>
 
     <div id="result">
